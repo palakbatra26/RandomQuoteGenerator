@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org/">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Quote Generator</title>
+    <style>
+        * {
+            background-color: #FA8072; /* Light Salmon for a warm background */
+        }
+
+        div {
+            text-align: center;
+            padding: 20px;
+        }
+
+        h1 {
+            font-style: normal;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            color: #8B0000; /* Dark Red for strong contrast */
+            font-weight: bold;
+        }
+
+        p {
+            font-weight: 500;
+            color: #2F4F4F; /* Dark Slate Gray for better readability */
+            font-size: 18px;
+        }
+
+        button {
+            background-color: #DC143C; /* Crimson button */
+            color: white; /* White text for contrast */
+            font-size: 16px;
+            font-weight: bold;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background-color 0.3s ease-in-out;
+        }
+
+        button:hover {
+            background-color: #8B0000; /* Dark Red for hover effect */
+        }
+
+        .footer {
+            margin-top: 20px;
+            font-size: 14px;
+            color: #8B0000;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h1>Random Quote Generator</h1>
+        <p th:text="${q}"></p>
+        <form action="/" method="get">
+            <button type="submit">New Quote</button>
+        </form>
+    </div>
+
+    <div class="footer">
+        Made by Palak Batra
+    </div>
+</body>
+</html>
